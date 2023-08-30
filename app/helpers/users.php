@@ -1,3 +1,2 @@
 <?php
-/* Add Admin */
-/* Upda */
+/* Register Users Details */
