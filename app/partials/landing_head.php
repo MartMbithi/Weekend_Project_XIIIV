@@ -5,7 +5,9 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Bakery Management System</title>
-    <meta name="description" content="240+ Best Bootstrap Templates are available on this website. Find your template for your project compatible with the most popular HTML library in the world." />
+    <meta name="description" content="A Bakery Management System is a software solution designed to streamline and automate various
+    aspects of bakery operations. It helps bakery owners and managers manage their day-to-day activities efficiently,
+    from inventory management and order processing to sales tracking and employee scheduling" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="https://gmpg.org/xfn/11">
     <link rel="canonical" href="http://127.0.0.1/bms/" />
