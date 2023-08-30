@@ -1,1 +1,1 @@
-Register Modals
+Register public assets
