@@ -5,16 +5,15 @@ require_once('../app/helpers/auth.php');
 require_once('../app/partials/head.php');
 ?>
 
-<body class="hold-transition login-page">
+<body class="hold-transition login-page" style="background-image: url('../public/img/main_bg.png'); background-size: cover;">
     <div class="login-box">
-        <div class="login-logo">
-            <a href="#"><b>Bakery</b>Management System</a>
-        </div>
-        <!-- /.login-logo -->
         <div class="card border border-success">
             <div class="card-body login-card-body">
+                <div class="login-logo">
+                    <a href="#">Bakery Management System</a>
+                </div>
+                <hr>
                 <p class="login-box-msg">Sign in to start your session</p>
-
                 <form method="post">
                     <div class="input-group mb-3">
                         <input type="email" class="form-control" required name="login_email" placeholder="Email">
