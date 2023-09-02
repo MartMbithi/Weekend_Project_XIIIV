@@ -10,7 +10,7 @@ require_once('../app/partials/head.php');
         <div class="card border border-success">
             <div class="card-body login-card-body">
                 <div class="login-logo">
-                    <a href="#"><b>Bakery</b>Management System</a>
+                    <a href="#">Bakery Management System</a>
                 </div>
                 <p class="login-box-msg">Forgot password</p>
                 <form method="post">
