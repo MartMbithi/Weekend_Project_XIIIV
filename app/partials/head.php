@@ -20,4 +20,20 @@
     <!-- Select2 -->
     <link rel="stylesheet" href="../public/plugins/select2/css/select2.min.css">
     <link rel="stylesheet" href="../public/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
+    <!-- Sweet Alerts -->
+    <link rel="stylesheet" href="../public/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
+    <!-- Toastr -->
+    <link rel="stylesheet" href="../public/plugins/toastr/toastr.min.css">
+    <?php
+    /* Alert Sesion Via Alerts */
+    if (isset($_SESSION['success'])) {
+        $success = $_SESSION['success'];
+        unset($_SESSION['success']);
+    }
+    /* Alert Sesion Via Alerts */
+    if (isset($_SESSION['err'])) {
+        $err = $_SESSION['err'];
+        unset($_SESSION['err']);
+    }
+    ?>
 </head>
