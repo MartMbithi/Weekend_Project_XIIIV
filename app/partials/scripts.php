@@ -40,7 +40,7 @@ if (isset($info)) { ?>
         toastr.warning('<?php echo $info; ?>')
     </script>
 <?php }
-require_once('../modals/logout.php'); ?>
+require_once('../app/partials/logout.php'); ?>
 <script>
     /* Prevent double submissions */
     if (window.history.replaceState) {
@@ -66,40 +66,6 @@ require_once('../modals/logout.php'); ?>
     $('.select2bs4').select2({
         theme: 'bootstrap4'
     })
-
-    /* Date picker */
-    $('.date_picker_range').daterangepicker()
-    /* Date picker */
-    $('.datepicker').datepicker({
-        format: 'mm/dd/yyyy',
-        startDate: '-7d'
-    });
-
-    /* Filter DP */
-    $('.filter_dp').datepicker({
-        format: 'mm/dd/yyyy'
-    });
-
-    function GetHouseDetails(val) {
-        $.ajax({
-            //get account rates
-            type: "POST",
-            url: "ajax.php",
-            data: 'TenantDetails=' + val,
-            success: function(data) {
-                //alert(data);
-                $('#AccountRates').val(data);
-                $('#AccountRates').val(data);
-                $('#AccountRates').val(data);
-                $('#AccountRates').val(data);
-                $('#AccountRates').val(data);
-                $('#AccountRates').val(data);
-                $('#AccountRates').val(data);
-                $('#AccountRates').val(data);
-            }
-        });
-
-    }
 
     /* Print elements in a div */
     function printContent(el) {
