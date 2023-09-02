@@ -24,11 +24,8 @@ require_once('../app/partials/head.php');
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-4">
-                        </div>
-                        <!-- /.col -->
-                        <div class="col-8">
+                    <div class="row text-center">
+                        <div class="col-12">
                             <button type="submit" name="Reset_Password_1" class="btn btn-primary btn-block">
                                 Reset Password
                             </button>

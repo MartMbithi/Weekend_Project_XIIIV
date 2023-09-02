@@ -32,11 +32,8 @@ require_once('../app/partials/head.php');
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-8">
-                        </div>
-                        <!-- /.col -->
-                        <div class="col-4">
+                    <div class="row text-center">
+                        <div class="col-12">
                             <button type="submit" name="Login" class="btn btn-primary btn-block">
                                 Sign In
                             </button>
