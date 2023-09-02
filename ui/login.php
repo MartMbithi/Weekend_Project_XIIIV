@@ -11,7 +11,7 @@ require_once('../app/partials/head.php');
             <a href="#"><b>Bakery</b>Management System</a>
         </div>
         <!-- /.login-logo -->
-        <div class="card">
+        <div class="card border border-success">
             <div class="card-body login-card-body">
                 <p class="login-box-msg">Sign in to start your session</p>
 

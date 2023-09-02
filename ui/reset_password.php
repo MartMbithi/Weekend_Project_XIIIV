@@ -11,9 +11,9 @@ require_once('../app/partials/head.php');
             <a href="#"><b>Bakery</b>Management System</a>
         </div>
         <!-- /.login-logo -->
-        <div class="card">
+        <div class="card border border-success">
             <div class="card-body login-card-body">
-                <p class="login-box-msg">Sign in to start your session</p>
+                <p class="login-box-msg">Forgot password</p>
 
                 <form method="post">
                     <div class="input-group mb-3">
@@ -25,10 +25,10 @@ require_once('../app/partials/head.php');
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-8">
+                        <div class="col-4">
                         </div>
                         <!-- /.col -->
-                        <div class="col-4">
+                        <div class="col-8">
                             <button type="submit" name="Reset_Password_1" class="btn btn-primary btn-block">
                                 Reset Password
                             </button>
