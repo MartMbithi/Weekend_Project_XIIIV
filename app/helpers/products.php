@@ -53,3 +53,23 @@ if (isset($_POST['Delete_Category'])) {
 
 
 /* Products */
+
+/* Add Product */
+if (isset($_POST['Add_Product'])) {
+    $product_category_id = mysqli_real_escape_string($mysqli, $_POST['product_category_id']);
+    $product_name = mysqli_real_escape_string($mysqli, $_POST['product_name']);
+    $product_details = mysqli_real_escape_string($mysqli, $_POST['product_details']);
+    $product_available_qty = mysqli_real_escape_string($mysqli, $_POST['product_available_qty']);
+    $product_price = mysqli_real_escape_string($mysqli, $_POST['product_price']);
+
+    $add_product_sql = "INSERT INTO products (product_category_id, product_name, product_details, product_available_qty, product_price)
+    VALUES('{$product_category_id}', '{$product_name}', '{$product_details}', '{$product_available_qty}', '{$product_price}')";
+
+    if (mysqli_query($mysqli, $add_product_sql)) {
+        $success = "Product added successfully";
+    } else {
+        $err = "Failed, please try again";
+    }
+}
+/* Update Product */
+/* Delete Product */
