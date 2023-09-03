@@ -94,19 +94,72 @@ require_once('../app/partials/head.php');
                         </div>
                     </div>
                     <!-- End Modal -->
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-12">
+                            <div class="card card-outline card-success">
+                                <div class="card-header">
+                                    <h5 class="card-title">Registered system users</h5>
+                                </div>
+                                <div class="card-body">
+                                    <table class="table data_table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>S/no</th>
+                                                <th>Names</th>
+                                                <th>Email</th>
+                                                <th>Address</th>
+                                                <th>Contacts</th>
+                                                <th>Manage</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php
+                                            $users_sql = mysqli_query(
+                                                $mysqli,
+                                                "SELECT * FROM users u
+                                                INNER JOIN login l ON l.login_id = u.user_login_id"
+                                            );
+                                            if (mysqli_num_rows($users_sql) > 0) {
+                                                $cnt = 1;
+                                                while ($users = mysqli_fetch_array($users_sql)) {
+                                            ?>
+                                                    <tr>
+                                                        <td><?php echo $cnt; ?></td>
+                                                        <td><?php echo $users['user_name']; ?></td>
+                                                        <td><?php echo $users['login_email']; ?></td>
+                                                        <td><?php echo $users['user_address']; ?></td>
+                                                        <td><?php echo $users['user_contact']; ?></td>
+                                                        <td>
+                                                            <a data-toggle="modal" href="#update_<?php echo $users['user_id']; ?>" class="badge badge-primary"><i class="fas fa-edit"></i> Edit</a>
+                                                            <a data-toggle="modal" href="#password_<?php echo $users['user_id']; ?>" class="badge badge-warning"><i class="fas fa-lock"></i> Change password</a>
+                                                            <a data-toggle="modal" href="#delete_<?php echo $users['user_id']; ?>" class="badge badge-danger"><i class="fas fa-trash"></i> Delete</a>
+                                                        </td>
+                                                    </tr>
+                                            <?php
+                                                    $cnt = $cnt + 1;
+                                                    include('../app/modals/users.php');
+                                                }
+                                            } ?>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <!-- /.content-wrapper -->
-
-
-            <!-- Main Footer -->
-            <?php require_once('../app/partials/footer.php'); ?>
         </div>
-        <!-- ./wrapper -->
+        <!-- /.content-wrapper -->
 
-        <!-- REQUIRED SCRIPTS -->
 
-        <?php require_once('../app/partials/scripts.php'); ?>
+        <!-- Main Footer -->
+        <?php require_once('../app/partials/footer.php'); ?>
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- REQUIRED SCRIPTS -->
+
+    <?php require_once('../app/partials/scripts.php'); ?>
 </body>
 
 
