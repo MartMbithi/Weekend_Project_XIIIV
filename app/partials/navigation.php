@@ -1,6 +1,6 @@
 <nav class="main-header navbar navbar-expand-md navbar-light navbar-white">
     <div class="container">
-        <a href="dashboaard" class="navbar-brand">
+        <a href="dashboard" class="navbar-brand">
             <span class="brand-text font-weight-light">Bakery Management System</span>
         </a>
 

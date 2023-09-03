@@ -58,7 +58,6 @@ if ($login_rank == '1') {
     /* Staffs */
 
 
-
     /* Customers */
     $query = "SELECT COUNT(*) FROM customers";
     $stmt = $mysqli->prepare($query);
