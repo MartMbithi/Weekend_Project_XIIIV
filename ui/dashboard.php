@@ -38,9 +38,8 @@ require_once('../app/partials/head.php');
                 <div class="container">
                     <div class="row">
                         <div class="col-12 col-sm-6 col-md-3">
-                            <div class="info-box">
-                                <span class="info-box-icon bg-info elevation-1"><i class="fas fa-users"></i></span>
-
+                            <div class="info-box card-outline card-success">
+                                <span class="info-box-icon bg-success elevation-1"><i class="fas fa-users"></i></span>
                                 <div class="info-box-content">
                                     <span class="info-box-text">Customers</span>
                                     <span class="info-box-number">
@@ -53,8 +52,8 @@ require_once('../app/partials/head.php');
                         </div>
                         <!-- /.col -->
                         <div class="col-12 col-sm-6 col-md-3">
-                            <div class="info-box mb-3">
-                                <span class="info-box-icon bg-info elevation-1"><i class="fas fa-user-tie"></i></span>
+                            <div class="info-box card-outline card-success">
+                                <span class="info-box-icon bg-success elevation-1"><i class="fas fa-user-tie"></i></span>
 
                                 <div class="info-box-content">
                                     <span class="info-box-text">Staffs</span>
@@ -72,8 +71,8 @@ require_once('../app/partials/head.php');
                         <div class="clearfix hidden-md-up"></div>
 
                         <div class="col-12 col-sm-6 col-md-3">
-                            <div class="info-box mb-3">
-                                <span class="info-box-icon bg-info elevation-1"><i class="fas fa-user-shield"></i></span>
+                            <div class="info-box card-outline card-success">
+                                <span class="info-box-icon bg-success elevation-1"><i class="fas fa-user-shield"></i></span>
 
                                 <div class="info-box-content">
                                     <span class="info-box-text">Administrators</span>
@@ -87,8 +86,8 @@ require_once('../app/partials/head.php');
                         </div>
                         <!-- /.col -->
                         <div class="col-12 col-sm-6 col-md-3">
-                            <div class="info-box mb-3">
-                                <span class="info-box-icon bg-info elevation-1"><i class="fas fa-boxes"></i></span>
+                            <div class="info-box card-outline card-success">
+                                <span class="info-box-icon bg-success elevation-1"><i class="fas fa-boxes"></i></span>
 
                                 <div class="info-box-content">
                                     <span class="info-box-text">Products</span>
@@ -104,8 +103,8 @@ require_once('../app/partials/head.php');
 
                         <!-- /.col -->
                         <div class="col-12 col-sm-6 col-md-3">
-                            <div class="info-box mb-3">
-                                <span class="info-box-icon bg-info elevation-1"><i class="fas fa-calendar"></i></span>
+                            <div class="info-box card-outline card-success">
+                                <span class="info-box-icon bg-success elevation-1"><i class="fas fa-calendar"></i></span>
 
                                 <div class="info-box-content">
                                     <span class="info-box-text">Orders</span>
@@ -121,8 +120,8 @@ require_once('../app/partials/head.php');
 
                         <!-- /.col -->
                         <div class="col-12 col-sm-6 col-md-3">
-                            <div class="info-box mb-3">
-                                <span class="info-box-icon bg-info elevation-1"><i class="fas fa-calendar-check"></i></span>
+                            <div class="info-box card-outline card-success">
+                                <span class="info-box-icon bg-success elevation-1"><i class="fas fa-calendar-check"></i></span>
 
                                 <div class="info-box-content">
                                     <span class="info-box-text">Paid Orders</span>
@@ -139,8 +138,8 @@ require_once('../app/partials/head.php');
 
                         <!-- /.col -->
                         <div class="col-12 col-sm-6 col-md-3">
-                            <div class="info-box mb-3">
-                                <span class="info-box-icon bg-info elevation-1"><i class="fas fa-calendar-times"></i></span>
+                            <div class="info-box card-outline card-success">
+                                <span class="info-box-icon bg-success elevation-1"><i class="fas fa-calendar-times"></i></span>
 
                                 <div class="info-box-content">
                                     <span class="info-box-text">Unpaid Orders</span>
@@ -156,8 +155,8 @@ require_once('../app/partials/head.php');
 
                         <!-- /.col -->
                         <div class="col-12 col-sm-6 col-md-3">
-                            <div class="info-box mb-3">
-                                <span class="info-box-icon bg-info elevation-1"><i class="fas fa-hand-holding-usd"></i></span>
+                            <div class="info-box card-outline card-success">
+                                <span class="info-box-icon bg-success elevation-1"><i class="fas fa-hand-holding-usd"></i></span>
 
                                 <div class="info-box-content">
                                     <span class="info-box-text">Cumulative Revenue</span>
