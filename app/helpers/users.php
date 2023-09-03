@@ -1,6 +1,8 @@
 <?php
 /* Staff Detils */
 
+
+/* Add Staff */
 if (isset($_POST['Add_Staff'])) {
     $user_name = mysqli_real_escape_string($mysqli, $_POST['user_name']);
     $user_contact = mysqli_real_escape_string($mysqli, $_POST['user_contact']);
@@ -37,4 +39,68 @@ if (isset($_POST['Add_Staff'])) {
         }
     }
 }
+
+
+/* Update Staff */
+if (isset($_POST['Add_Staff'])) {
+    $user_name = mysqli_real_escape_string($mysqli, $_POST['user_name']);
+    $user_contact = mysqli_real_escape_string($mysqli, $_POST['user_contact']);
+    $user_address = mysqli_real_escape_string($mysqli, $_POST['user_address']);
+    $login_email = mysqli_real_escape_string($mysqli, $_POST['login_email']);
+    $login_rank = mysqli_real_escape_string($mysqli, $_POST['login_rank']);
+    $user_login_id = mysqli_real_escape_string($mysqli, $_POST['user_login_id']);
+
+    /* Persist */
+    $update_auth = "UPDATE login SET login_email = '{$login_email}', login_rank = '{$login_rank}'
+    WHERE login_id = '{$user_login_id}'";
+    $update_staff = "UPDATE users SET user_name = '{$user_name}', user_contact = '{$user_contact}', user_address = '{$user_address}'
+    WHERE user_login_id = '{$user_login_id}'";
+
+    if (mysqli_query($mysqli, $update_auth) && mysqli_query($mysqli, $update_staff)) {
+        $success = "User account details updated";
+    } else {
+        $err = "Failed, please try again";
+    }
+}
+
+/* Change Password */
+if (isset($_POST['Change_Password'])) {
+    $user_login_id  = mysqli_real_escape_string($mysqli, $_POST['user_login_id']);
+    $new_password =  sha1(md5(mysqli_real_escape_string($mysqli, $_POST['new_password'])));
+    $confirm_password = sha1(md5(mysqli_real_escape_string($mysqli, $_POST['confirm_password'])));
+
+    /* Change Password */
+    $change_password_sql = "UPDATE login SET login_password = '{$confirm_password}' WHERE login_id = '{$user_login_id}'";
+
+    if (mysqli_query($mysqli, $change_password_sql)) {
+        $success = "Password updated";
+    } else {
+        $err = "Failed, please try again";
+    }
+}
+
+/* Delete Staff */
+if (isset($_POST['Delete_Staff'])) {
+    $user_login_id = mysqli_real_escape_string($mysqli, $_POST['user_login_id']);
+
+    /* Delete */
+    $delete_sql = "DELETE FROM login WHERE login_id = '{$login_id}'";
+
+    if (mysqli_query($mysqli, $delete_sql)) {
+        $success = "User detais deleted";
+    } else {
+        $err = "Failed, please try again";
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
 /* Customer Details */
