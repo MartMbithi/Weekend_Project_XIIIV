@@ -111,7 +111,7 @@ if (isset($_POST['Add_Customer'])) {
         $err = "Customer details already exists";
     } else {
         /* Persist */
-        $add_customer_sql = "INSERT INTO customer (customer_name, customer_contact, customer_address)
+        $add_customer_sql = "INSERT INTO customers (customer_name, customer_contact, customer_address)
         VALUES('{$customer_name}', '{$customer_contact}', '{$customer_address}')";
 
         if (mysqli_query($mysqli, $add_customer_sql)) {
