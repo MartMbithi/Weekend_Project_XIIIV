@@ -125,7 +125,14 @@ require_once('../app/partials/head.php');
                                             ?>
                                                     <tr>
                                                         <td><?php echo $cnt; ?></td>
-                                                        <td><?php echo $users['user_name']; ?></td>
+                                                        <td>
+                                                            <?php echo $users['user_name']; ?> <br>
+                                                            <?php if ($users['login_rank'] == '0') { ?>
+                                                                <span class="badge badge-success">Staff</span>
+                                                            <?php } else { ?>
+                                                                <span class="badge badge-danger">Administrator</span>
+                                                            <?php } ?>
+                                                        </td>
                                                         <td><?php echo $users['login_email']; ?></td>
                                                         <td><?php echo $users['user_address']; ?></td>
                                                         <td><?php echo $users['user_contact']; ?></td>
@@ -150,7 +157,6 @@ require_once('../app/partials/head.php');
             </div>
         </div>
         <!-- /.content-wrapper -->
-
 
         <!-- Main Footer -->
         <?php require_once('../app/partials/footer.php'); ?>
