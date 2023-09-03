@@ -23,8 +23,8 @@
                 <li class="nav-item dropdown">
                     <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Products</a>
                     <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
-                        <li><a href="reports_staffs" class="dropdown-item">Categories </a></li>
-                        <li><a href="reports_customers" class="dropdown-item">Products</a></li>
+                        <li><a href="categories" class="dropdown-item">Categories </a></li>
+                        <li><a href="products" class="dropdown-item">Products</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
