@@ -5,7 +5,7 @@ if (isset($_POST['Login'])) {
     $login_password = sha1(md5(mysqli_real_escape_string($mysqli, $_POST['login_password'])));
 
     /* Process login */
-    $login_sql = "SELECT * FROM login WHERE login_email = '{$login_username}' AND login_password = '{$login_password}'";
+    $login_sql = "SELECT * FROM login WHERE login_email = '{$login_email}' AND login_password = '{$login_password}'";
     $res = mysqli_query($mysqli, $login_sql);
     if (mysqli_num_rows($res) > 0) {
         $row = mysqli_fetch_assoc($res);
