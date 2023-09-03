@@ -84,7 +84,7 @@ if (isset($_POST['Delete_Staff'])) {
     $user_login_id = mysqli_real_escape_string($mysqli, $_POST['user_login_id']);
 
     /* Delete */
-    $delete_sql = "DELETE FROM login WHERE login_id = '{$login_id}'";
+    $delete_sql = "DELETE FROM login WHERE login_id = '{$user_login_id}'";
 
     if (mysqli_query($mysqli, $delete_sql)) {
         $success = "User detais deleted";
