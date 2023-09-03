@@ -71,5 +71,28 @@ if (isset($_POST['Add_Product'])) {
         $err = "Failed, please try again";
     }
 }
+
+
 /* Update Product */
+if (isset($_POST['Update_Product'])) {
+    $product_category_id = mysqli_real_escape_string($mysqli, $_POST['product_category_id']);
+    $product_name = mysqli_real_escape_string($mysqli, $_POST['product_name']);
+    $product_details = mysqli_real_escape_string($mysqli, $_POST['product_details']);
+    $product_available_qty = mysqli_real_escape_string($mysqli, $_POST['product_available_qty']);
+    $product_price = mysqli_real_escape_string($mysqli, $_POST['product_price']);
+    $product_id = mysqli_real_escape_string($mysqli, $_POST['product_id']);
+
+    /* Persist */
+    $update_product_sql = "UPDATE products SET product_name = '{$product_name}', product_details = '{$product_details}',
+    product_available_qty = '{$product_available_qty}', product_price = '{$product_price}', product_category_id = '{$product_category_id}'
+    WHERE  product_id = '{$product_id}'";
+
+    if (mysqli_query($mysqli, $update_product_sql)) {
+        $success = "Product details updated successfully";
+    } else {
+        $err = "Failed, please try again";
+    }
+}
+
+
 /* Delete Product */
