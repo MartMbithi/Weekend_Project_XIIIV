@@ -96,3 +96,15 @@ if (isset($_POST['Update_Product'])) {
 
 
 /* Delete Product */
+if (isset($_POST['Delete_Product'])) {
+    $product_id = mysqli_real_escape_string($mysqli, $_POST['product_id']);
+
+    /* Delete */
+    $delete_product_sql = "DELETE FROM products WHERE product_id = '{$product_id}'";
+
+    if (mysqli_query($mysqli, $delete_product_sql)) {
+        $success = "Product deleted successfully";
+    } else {
+        $err = "Failed, please try again";
+    }
+}
