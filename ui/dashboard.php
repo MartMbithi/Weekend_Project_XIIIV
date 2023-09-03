@@ -58,7 +58,7 @@ require_once('../app/partials/head.php');
                                 <div class="info-box-content">
                                     <span class="info-box-text">Staffs</span>
                                     <span class="info-box-number">
-                                        <?php echo $customers; ?>
+                                        <?php echo $staffs; ?>
                                     </span>
                                 </div>
                                 <!-- /.info-box-content -->

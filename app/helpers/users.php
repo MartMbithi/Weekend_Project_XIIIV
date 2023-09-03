@@ -8,7 +8,7 @@ if (isset($_POST['Add_Staff'])) {
     $user_contact = mysqli_real_escape_string($mysqli, $_POST['user_contact']);
     $user_address = mysqli_real_escape_string($mysqli, $_POST['user_address']);
     $login_email = mysqli_real_escape_string($mysqli, $_POST['login_email']);
-    $login_password = mysqli_real_escape_string($mysqli, $_POST['login_password']);
+    $login_password = sha1(md5(mysqli_real_escape_string($mysqli, $_POST['login_password'])));
     $login_rank = mysqli_real_escape_string($mysqli, $_POST['login_rank']);
 
     /* Prevent duplications */
@@ -42,7 +42,7 @@ if (isset($_POST['Add_Staff'])) {
 
 
 /* Update Staff */
-if (isset($_POST['Add_Staff'])) {
+if (isset($_POST['Update_Staff'])) {
     $user_name = mysqli_real_escape_string($mysqli, $_POST['user_name']);
     $user_contact = mysqli_real_escape_string($mysqli, $_POST['user_contact']);
     $user_address = mysqli_real_escape_string($mysqli, $_POST['user_address']);
