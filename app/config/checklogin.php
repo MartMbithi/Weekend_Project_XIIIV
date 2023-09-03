@@ -14,3 +14,9 @@ function check_login()
 
 /* Invoke IT */
 check_login();
+
+/* Global Access Levels */
+$login_id = mysqli_real_escape_string($mysqli, $_SESSION['login_id']);
+$login_rank = mysqli_real_escape_string($mysqli, $_SESSION['login_rank']);
+
+global $login_id, $login_rank;
