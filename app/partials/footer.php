@@ -1,4 +1,5 @@
-<footer class="main-footer">
+<?php include('../app/partials/content_breaker.php'); ?>
+<footer class="main-footer fixed-bottom">
     <!-- To the right -->
     <div class="float-right d-none d-sm-inline">
         Bakery Management System

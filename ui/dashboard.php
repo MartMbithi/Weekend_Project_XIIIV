@@ -170,21 +170,62 @@ require_once('../app/partials/head.php');
                         </div>
                         <!-- /.col -->
                     </div>
-                </div><!-- /.container-fluid -->
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-12">
+                            <div class="card card-outline card-success">
+                                <div class="card-header">
+                                    <h5 class="card-title">Recent Orders</h5>
+                                </div>
+                                <div class="card-body">
+                                    <table class="table data_table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>Customer</th>
+                                                <th>Product</th>
+                                                <th>Order QTY</th>
+                                                <th>Date</th>
+                                                <th>Amount</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php
+                                            $orders_sql = mysqli_query(
+                                                $mysqli,
+                                                "SELECT * FROM orders o INNER JOIN customers c
+                                                ON c.customer_id = o.order_customer_id INNER JOIN
+                                                products p ON p.product_id = o.order_product_id"
+                                            );
+                                            if (mysqli_num_rows($orders_sql) > 0) {
+                                                while ($orders = mysqli_fetch_array($orders_sql)) {
+                                            ?>
+                                                    <tr>
+                                                        <td><?php echo $orders['customer_name']; ?></td>
+                                                        <td><?php echo $orders['product_name']; ?></td>
+                                                        <td><?php echo $orders['order_qty']; ?></td>
+                                                        <td><?php echo date('d M Y', strtotime($orders['order_date'])); ?></td>
+                                                        <td>Ksh <?php echo number_format($orders['order_price']); ?></td>
+                                                    </tr>
+                                            <?php }
+                                            } ?>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- /.container-fluid -->
+                </div>
             </div>
-            <!-- /.content -->
+            <!-- /.content-wrapper -->
+
+
+            <!-- Main Footer -->
+            <?php require_once('../app/partials/footer.php'); ?>
         </div>
-        <!-- /.content-wrapper -->
+        <!-- ./wrapper -->
 
+        <!-- REQUIRED SCRIPTS -->
 
-        <!-- Main Footer -->
-        <?php require_once('../app/partials/footer.php'); ?>
-    </div>
-    <!-- ./wrapper -->
-
-    <!-- REQUIRED SCRIPTS -->
-
-    <?php require_once('../app/partials/scripts.php'); ?>
+        <?php require_once('../app/partials/scripts.php'); ?>
 </body>
 
 
