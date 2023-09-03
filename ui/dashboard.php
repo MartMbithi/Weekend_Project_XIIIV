@@ -44,8 +44,7 @@ require_once('../app/partials/head.php');
                                 <div class="info-box-content">
                                     <span class="info-box-text">Customers</span>
                                     <span class="info-box-number">
-                                        10
-                                        <small>%</small>
+                                        <?php echo $customers; ?>
                                     </span>
                                 </div>
                                 <!-- /.info-box-content -->
@@ -55,11 +54,13 @@ require_once('../app/partials/head.php');
                         <!-- /.col -->
                         <div class="col-12 col-sm-6 col-md-3">
                             <div class="info-box mb-3">
-                                <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-thumbs-up"></i></span>
+                                <span class="info-box-icon bg-info elevation-1"><i class="fas fa-thumbs-up"></i></span>
 
                                 <div class="info-box-content">
                                     <span class="info-box-text">Staffs</span>
-                                    <span class="info-box-number">41,410</span>
+                                    <span class="info-box-number">
+                                        <?php echo $customers; ?>
+                                    </span>
                                 </div>
                                 <!-- /.info-box-content -->
                             </div>
@@ -72,11 +73,13 @@ require_once('../app/partials/head.php');
 
                         <div class="col-12 col-sm-6 col-md-3">
                             <div class="info-box mb-3">
-                                <span class="info-box-icon bg-success elevation-1"><i class="fas fa-shopping-cart"></i></span>
+                                <span class="info-box-icon bg-info elevation-1"><i class="fas fa-shopping-cart"></i></span>
 
                                 <div class="info-box-content">
                                     <span class="info-box-text">Administrators</span>
-                                    <span class="info-box-number">760</span>
+                                    <span class="info-box-number">
+                                        <?php echo $customers; ?>
+                                    </span>
                                 </div>
                                 <!-- /.info-box-content -->
                             </div>
@@ -85,11 +88,13 @@ require_once('../app/partials/head.php');
                         <!-- /.col -->
                         <div class="col-12 col-sm-6 col-md-3">
                             <div class="info-box mb-3">
-                                <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-users"></i></span>
+                                <span class="info-box-icon bg-info elevation-1"><i class="fas fa-users"></i></span>
 
                                 <div class="info-box-content">
                                     <span class="info-box-text">Products</span>
-                                    <span class="info-box-number">2,000</span>
+                                    <span class="info-box-number">
+                                        <?php echo $customers; ?>
+                                    </span>
                                 </div>
                                 <!-- /.info-box-content -->
                             </div>
@@ -100,11 +105,13 @@ require_once('../app/partials/head.php');
                         <!-- /.col -->
                         <div class="col-12 col-sm-6 col-md-3">
                             <div class="info-box mb-3">
-                                <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-users"></i></span>
+                                <span class="info-box-icon bg-info elevation-1"><i class="fas fa-users"></i></span>
 
                                 <div class="info-box-content">
                                     <span class="info-box-text">Orders</span>
-                                    <span class="info-box-number">2,000</span>
+                                    <span class="info-box-number">
+                                        <?php echo $total_orders; ?>
+                                    </span>
                                 </div>
                                 <!-- /.info-box-content -->
                             </div>
@@ -115,11 +122,13 @@ require_once('../app/partials/head.php');
                         <!-- /.col -->
                         <div class="col-12 col-sm-6 col-md-3">
                             <div class="info-box mb-3">
-                                <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-users"></i></span>
+                                <span class="info-box-icon bg-info elevation-1"><i class="fas fa-users"></i></span>
 
                                 <div class="info-box-content">
                                     <span class="info-box-text">Paid Orders</span>
-                                    <span class="info-box-number">2,000</span>
+                                    <span class="info-box-number">
+                                        <?php echo $paid_orders; ?>
+                                    </span>
                                 </div>
                                 <!-- /.info-box-content -->
                             </div>
@@ -131,11 +140,13 @@ require_once('../app/partials/head.php');
                         <!-- /.col -->
                         <div class="col-12 col-sm-6 col-md-3">
                             <div class="info-box mb-3">
-                                <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-users"></i></span>
+                                <span class="info-box-icon bg-info elevation-1"><i class="fas fa-users"></i></span>
 
                                 <div class="info-box-content">
                                     <span class="info-box-text">Unpaid Orders</span>
-                                    <span class="info-box-number">2,000</span>
+                                    <span class="info-box-number">
+                                        <?php echo $unpaid_orders; ?>
+                                    </span>
                                 </div>
                                 <!-- /.info-box-content -->
                             </div>
@@ -146,11 +157,13 @@ require_once('../app/partials/head.php');
                         <!-- /.col -->
                         <div class="col-12 col-sm-6 col-md-3">
                             <div class="info-box mb-3">
-                                <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-users"></i></span>
+                                <span class="info-box-icon bg-info elevation-1"><i class="fas fa-users"></i></span>
 
                                 <div class="info-box-content">
                                     <span class="info-box-text">Cumulative Revenue</span>
-                                    <span class="info-box-number">2,000</span>
+                                    <span class="info-box-number">
+                                        Ksh <?php echo number_format($payments); ?>
+                                    </span>
                                 </div>
                                 <!-- /.info-box-content -->
                             </div>
