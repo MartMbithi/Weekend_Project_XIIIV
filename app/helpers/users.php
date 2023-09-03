@@ -96,11 +96,26 @@ if (isset($_POST['Delete_Staff'])) {
 
 
 
-
-
-
-
-
-
-
 /* Customer Details */
+if (isset($_POST['Add_Customer'])) {
+    $customer_name = mysqli_real_escape_string($mysqli, $_POST['customer_name']);
+    $customer_contact = mysqli_real_escape_string($mysqli, $_POST['customer_contact']);
+    $customer_address = mysqli_real_escape_string($mysqli, $_POST['customer_address']);
+
+    /* Prevent Duplications */
+    $duplication_checker_sql = "SELECT * FROM  customers WHERE customer_contact = '{$customer_contact}' ";
+    $res = mysqli_query($mysqli, $duplication_checker_sql);
+    if (mysqli_num_rows($res) > 0) {
+        $err = "Customer details already exists";
+    } else {
+        /* Persist */
+        $add_customer_sql = "INSERT INTO customer (customer_name, customer_contact, customer_address)
+        VALUES('{$customer_name}', '{$customer_contact}', '{$customer_address}')";
+
+        if (mysqli_query($mysqli, $add_customer_sql)) {
+            $success = "Customer added";
+        } else {
+            $err = "Failed, please try again";
+        }
+    }
+}
