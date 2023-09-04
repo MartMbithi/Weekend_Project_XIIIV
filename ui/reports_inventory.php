@@ -44,16 +44,15 @@ require_once('../app/partials/head.php');
                                     <h5 class="card-title">Products Inventory</h5>
                                 </div>
                                 <div class="card-body">
-                                    <table class="table data_table table-striped">
+                                    <table class="table export_dt table-striped">
                                         <thead>
                                             <tr>
                                                 <th>S/no</th>
                                                 <th>Category</th>
                                                 <th>Product</th>
                                                 <th>Details</th>
-                                                <th>QTY</th>
+                                                <th>QTY Available</th>
                                                 <th>Unit Price</th>
-                                                <th>Manage</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -84,17 +83,9 @@ require_once('../app/partials/head.php');
                                                         <td>
                                                             Ksh <?php echo number_format($products['product_price']); ?> <br>
                                                         </td>
-                                                        <td>
-                                                            <?php if ($products['product_available_qty'] > 0) { ?>
-                                                                <a data-toggle="modal" href="#order_<?php echo $products['product_id']; ?>" class="badge badge-success"><i class="fas fa-shopping-cart"></i> Order</a>
-                                                            <?php } ?>
-                                                            <a data-toggle="modal" href="#update_<?php echo $products['product_id']; ?>" class="badge badge-primary"><i class="fas fa-edit"></i> Edit</a>
-                                                            <a data-toggle="modal" href="#delete_<?php echo $products['product_id']; ?>" class="badge badge-danger"><i class="fas fa-trash"></i> Delete</a>
-                                                        </td>
                                                     </tr>
                                             <?php
                                                     $cnt = $cnt + 1;
-                                                    include('../app/modals/products.php');
                                                 }
                                             } ?>
                                         </tbody>

@@ -36,6 +36,7 @@
                         <li><a href="reports_staffs" class="dropdown-item">Staffs </a></li>
                         <li><a href="reports_customers" class="dropdown-item">Customers</a></li>
                         <li><a href="reports_inventory" class="dropdown-item">Inventory</a></li>
+                        <li><a href="reports_orders" class="dropdown-item">Orders</a></li>
                     </ul>
                 </li>
             </ul>
