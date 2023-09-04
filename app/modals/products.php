@@ -16,7 +16,7 @@
                         <div class="form-group col-md-12">
                             <label for="">Customer</label>
                             <input type="hidden" required name="product_price" value="<?php echo $products['product_price']; ?>" class="form-control">
-                            <input type="hidden" required name="product_id" value="<?php echo $products['product_id']; ?>" class="form-control">
+                            <input type="hidden" required name="order_product_id" value="<?php echo $products['product_id']; ?>" class="form-control">
                             <select type="text" required name="order_customer_id" class="form-control select2bs4">
                                 <option value="">Select Customer</option>
                                 <?php
@@ -115,5 +115,22 @@
 <!-- End Edit -->
 
 <!-- Delete  -->
+<div class="modal fade" id="delete_<?php echo $products['product_id']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <form method="POST">
+                <div class="modal-body text-center text-danger">
+                    <img src='../public/img/bin.gif' height="120px">
+                    <h4>Delete <?php echo $products['product_name']; ?>?</h4>
+                    <br>
+                    <!-- Hide This -->
+                    <input type="hidden" name="product_id" value="<?php echo $products['product_id']; ?>">
+                    <button type="button" class="text-center btn btn-success" data-dismiss="modal">No</button>
+                    <button type="submit" name="Delete_Product" class="text-center btn btn-danger">Yes, Delete</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 
 <!-- End Delete -->

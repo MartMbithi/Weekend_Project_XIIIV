@@ -108,3 +108,29 @@ if (isset($_POST['Delete_Product'])) {
         $err = "Failed, please try again";
     }
 }
+
+
+/* Orders */
+
+/* Add Order */
+if (isset($_POST['Add_Order'])) {
+    $order_customer_id = mysqli_real_escape_string($mysqli, $_POST['order_customer_id']);
+    $order_product_id = mysqli_real_escape_string($mysqli, $_POST['order_product_id']);
+    $order_qty = mysqli_real_escape_string($mysqli, $_POST['order_qty']);
+    $order_status = mysqli_real_escape_string($mysqli, 'Unpaid');
+    $order_date = mysqli_real_escape_string($mysqli, $_POST['order_date']);
+    $order_price = mysqli_real_escape_string(
+        $mysqli,
+        ($_POST['product_price'] * $order_qty)
+    );
+
+    /* Persist Order */
+    $add_order_sql = "INSERT INTO orders (order_customer_id, order_product_id, order_qty, order_status, order_date, order_price)
+    VALUES('{$order_customer_id}', '{$order_product_id}', '{$order_qty}', '{$order_status}', '{$order_date}', '{$order_price}')";
+
+    if (mysqli_query($mysqli, $add_order_sql)) {
+        $success = "Order posted, proceed to pay";
+    } else {
+        $err = "Failed, please try again";
+    }
+}
