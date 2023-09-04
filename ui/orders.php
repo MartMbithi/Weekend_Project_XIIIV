@@ -88,8 +88,7 @@ require_once('../app/partials/head.php');
                                                             <?php if ($orders['order_status'] != 'Paid') { ?>
                                                                 <a data-toggle="modal" href="#pay_<?php echo $orders['order_id']; ?>" class="badge badge-success"><i class="fas fa-hand-holding-usd"></i> Pay</a>
                                                             <?php } ?>
-                                                            <a data-toggle="modal" href="#update_<?php echo $orders['order_id']; ?>" class="badge badge-primary"><i class="fas fa-edit"></i> Edit</a>
-                                                            <a data-toggle="modal" href="#delete_<?php echo $orders['order_id']; ?>" class="badge badge-danger"><i class="fas fa-trash"></i> Cancel</a>
+                                                            <a data-toggle="modal" href="#delete_<?php echo $orders['order_id']; ?>" class="badge badge-danger"><i class="fas fa-times"></i> Cancel</a>
                                                         </td>
                                                     </tr>
                                             <?php
