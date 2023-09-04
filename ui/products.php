@@ -58,13 +58,44 @@ require_once('../app/partials/head.php');
                                 <div class="modal-body">
                                     <form class="needs-validation" method="post" enctype="multipart/form-data" role="form">
                                         <div class="row">
+                                            <div class="form-group col-md-8">
+                                                <label for="">Product Name</label>
+                                                <input type="text" required name="product_name" class="form-control">
+                                            </div>
+                                            <div class="form-group col-md-4">
+                                                <label for="">Product Category</label>
+                                                <select type="text" required name="product_category_id" class="form-control select2bs4">
+                                                    <option value="">Select</option>
+                                                    <?php
+                                                    $categories_sql = mysqli_query(
+                                                        $mysqli,
+                                                        "SELECT * FROM categories"
+                                                    );
+                                                    if (mysqli_num_rows($categories_sql) > 0) {
+                                                        $cnt = 1;
+                                                        while ($categories = mysqli_fetch_array($categories_sql)) {
+                                                    ?>
+                                                            <option value="<?php echo $categories['category_id']; ?>"><?php echo $categories['category_name']; ?></option>
+                                                    <?php }
+                                                    } ?>
+                                                </select>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label for="">Product QTY</label>
+                                                <input type="text" required name="product_available_qty" class="form-control">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label for="">Product Price</label>
+                                                <input type="text" required name="product_price" class="form-control">
+                                            </div>
                                             <div class="form-group col-md-12">
-                                                <label for="">Category name</label>
-                                                <input type="text" required name="category_name" class="form-control">
+                                                <label for="">Product Details</label>
+                                                <textarea type="text" required name="product_details" class="form-control"></textarea>
                                             </div>
                                         </div>
+
                                         <div class="text-right">
-                                            <button type="submit" name="Add_Category" class="btn btn-outline-success">Add</button>
+                                            <button type="submit" name="Add_Product" class="btn btn-outline-success">Add</button>
                                         </div>
                                     </form>
                                 </div>
@@ -76,7 +107,7 @@ require_once('../app/partials/head.php');
                         <div class="col-12 col-sm-12 col-md-12">
                             <div class="card card-outline card-success">
                                 <div class="card-header">
-                                    <h5 class="card-title">Registered product categories</h5>
+                                    <h5 class="card-title">Registered products</h5>
                                 </div>
                                 <div class="card-body">
                                     <table class="table data_table table-striped">
