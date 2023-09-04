@@ -7,7 +7,7 @@ require_once('../app/partials/head.php');
 
 <body class="hold-transition login-page" style="background-image: url('../public/img/main_bg.png'); background-size: cover;">
     <div class="login-box">
-        <div class="card border border-success">
+        <div class="card card-outline card-primary">
             <div class="card-body login-card-body">
                 <div class="login-logo">
                     <a href="#">Bakery Management System</a>
