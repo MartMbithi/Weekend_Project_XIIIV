@@ -17,6 +17,7 @@
                             <label for="">Customer</label>
                             <input type="hidden" required name="product_price" value="<?php echo $products['product_price']; ?>" class="form-control">
                             <input type="hidden" required name="order_product_id" value="<?php echo $products['product_id']; ?>" class="form-control">
+                            <input type="hidden" required name="product_available_qty" value="<?php echo $products['product_available_qty']; ?>" class="form-control">
                             <select type="text" required name="order_customer_id" class="form-control select2bs4">
                                 <option value="">Select Customer</option>
                                 <?php

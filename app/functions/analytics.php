@@ -53,7 +53,7 @@ $stmt->close();
 
 
 /* Paid Orders */
-$query = "SELECT COUNT(*) FROM orders WHERE order_status = 'Un Paid'";
+$query = "SELECT COUNT(*) FROM orders WHERE order_status = 'Unpaid'";
 $stmt = $mysqli->prepare($query);
 $stmt->execute();
 $stmt->bind_result($unpaid_orders);
