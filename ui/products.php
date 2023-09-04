@@ -20,13 +20,13 @@ require_once('../app/partials/head.php');
                 <div class="container">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0 text-dark"> Categories</h1>
+                            <h1 class="m-0 text-dark"> Products</h1>
                         </div><!-- /.col -->
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="dashboard">Home</a></li>
                                 <li class="breadcrumb-item"><a href="#">Products</a></li>
-                                <li class="breadcrumb-item active">Categories</li>
+                                <li class="breadcrumb-item active">Manage</li>
                             </ol>
                         </div><!-- /.col -->
                     </div><!-- /.row -->
@@ -39,7 +39,7 @@ require_once('../app/partials/head.php');
                 <div class="container">
                     <div class="d-flex flex-row-reverse bd-highlight">
                         <button type="button" data-toggle="modal" data-target="#add_modal" class="btn btn-outline-success">
-                            Add categories
+                            Add Product
                         </button>
                     </div>
                     <hr>
@@ -49,7 +49,7 @@ require_once('../app/partials/head.php');
                             <div class="modal-content">
                                 <div class="modal-header align-items-center">
                                     <div class="text-center">
-                                        <h6 class="mb-0 text-bold">Register new category</h6>
+                                        <h6 class="mb-0 text-bold">Register new product</h6>
                                     </div>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
@@ -114,11 +114,11 @@ require_once('../app/partials/head.php');
                                         <thead>
                                             <tr>
                                                 <th>S/no</th>
-                                                <th>Category Name</th>
-                                                <th>Product Name</th>
+                                                <th>Category</th>
+                                                <th>Product</th>
                                                 <th>Details</th>
                                                 <th>QTY</th>
-                                                <th>Price</th>
+                                                <th>Unit Price</th>
                                                 <th>Manage</th>
                                             </tr>
                                         </thead>
@@ -148,7 +148,7 @@ require_once('../app/partials/head.php');
                                                             <?php echo $products['product_available_qty']; ?> <br>
                                                         </td>
                                                         <td>
-                                                            <?php echo number_format($products['product_price']); ?> <br>
+                                                            Ksh <?php echo number_format($products['product_price']); ?> <br>
                                                         </td>
                                                         <td>
                                                             <a data-toggle="modal" href="#order_<?php echo $products['product_id']; ?>" class="badge badge-success"><i class="fas fa-shopping-cart"></i> Order</a>
