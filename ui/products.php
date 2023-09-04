@@ -151,7 +151,9 @@ require_once('../app/partials/head.php');
                                                             Ksh <?php echo number_format($products['product_price']); ?> <br>
                                                         </td>
                                                         <td>
-                                                            <a data-toggle="modal" href="#order_<?php echo $products['product_id']; ?>" class="badge badge-success"><i class="fas fa-shopping-cart"></i> Order</a>
+                                                            <?php if ($products['product_available_qty'] > 0) { ?>
+                                                                <a data-toggle="modal" href="#order_<?php echo $products['product_id']; ?>" class="badge badge-success"><i class="fas fa-shopping-cart"></i> Order</a>
+                                                            <?php } ?>
                                                             <a data-toggle="modal" href="#update_<?php echo $products['product_id']; ?>" class="badge badge-primary"><i class="fas fa-edit"></i> Edit</a>
                                                             <a data-toggle="modal" href="#delete_<?php echo $products['product_id']; ?>" class="badge badge-danger"><i class="fas fa-trash"></i> Delete</a>
                                                         </td>
