@@ -7,7 +7,7 @@ if (isset($_POST['Update_Orders'])) {
     $order_status = mysqli_real_escape_string($mysqli, $_POST['order_status']);
 
     /* Roll Back */
-    $roll_back_product = "UPDATE products SET product_qty = product_qty + '{$order_qty}' WHERE product_id = '{$order_product_id}'";
+    $roll_back_product = "UPDATE products SET product_available_qty = product_available_qty + '{$order_qty}' WHERE product_id = '{$order_product_id}'";
     $update_order = "UPDATE orders SET order_qty = '{$order_qty}', order_status = '{$order_status}' WHERE order_id = '{$order_id}'";
 
     if (mysqli_query($mysqli, $update_order) && mysqli_query($mysqli, $roll_back_product)) {
@@ -24,7 +24,7 @@ if (isset($_POST['Delete_Orders'])) {
     $order_product_id = mysqli_real_escape_string($mysqli, $_POST['order_product_id']);
 
     /* Roll Back */
-    $roll_back_product = "UPDATE products SET product_qty = product_qty + '{$order_qty}' WHERE product_id = '{$order_product_id}'";
+    $roll_back_product = "UPDATE products SET product_available_qty = product_available_qty + '{$order_qty}' WHERE product_id = '{$order_product_id}'";
     $delete_order = "DELETE FROM orders WHERE order_id = '{$order_id}'";
 
     if (mysqli_query($mysqli, $delete_order) && mysqli_query($mysqli, $roll_back_product)) {
@@ -33,6 +33,8 @@ if (isset($_POST['Delete_Orders'])) {
         $err = "Failed, Please try again";
     }
 }
+
+
 /* Pay Orders */
 if (isset($_POST['Pay_Order'])) {
     $order_id = mysqli_real_escape_string($mysqli, $_POST['order_id']);
