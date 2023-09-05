@@ -8,7 +8,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <?php if ($user_access_level == '1') { ?>
+        <?php if ($login_rank == '1') { ?>
 
             <div class="collapse navbar-collapse order-3" id="navbarCollapse">
                 <!-- Left navbar links -->
