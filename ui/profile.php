@@ -95,11 +95,19 @@ require_once('../app/partials/head.php');
                                                                 <div class="row">
                                                                     <div class="form-group col-md-12">
                                                                         <label for="">Full names</label>
-                                                                        <input type="text" required name="user_names" value="<?php echo $user['user_names']; ?>" class="form-control">
+                                                                        <input type="text" required name="user_name" value="<?php echo $user['user_name']; ?>" class="form-control">
                                                                     </div>
                                                                     <div class="form-group col-md-12">
-                                                                        <label for="">Login username</label>
-                                                                        <input type="text" required name="user_login_name" value="<?php echo $user['user_login_name']; ?>" class="form-control">
+                                                                        <label for="">Email</label>
+                                                                        <input type="text" required name="login_email" value="<?php echo $user['login_email']; ?>" class="form-control">
+                                                                    </div>
+                                                                    <div class="form-group col-md-12">
+                                                                        <label for="">Contacts</label>
+                                                                        <input type="text" required name="user_contact" value="<?php echo $user['user_contact']; ?>" class="form-control">
+                                                                    </div>
+                                                                    <div class="form-group col-md-12">
+                                                                        <label for="">Address</label>
+                                                                        <input type="text" required name="user_address" value="<?php echo $user['user_address']; ?>" class="form-control">
                                                                     </div>
                                                                 </div>
                                                                 <div class="text-right">
