@@ -95,6 +95,7 @@ require_once('../app/partials/head.php');
                                                                 <div class="row">
                                                                     <div class="form-group col-md-12">
                                                                         <label for="">Full names</label>
+                                                                        <input type="hidden" required name="user_login_id" value="<?php echo $user['user_login_id']; ?>" class="form-control">
                                                                         <input type="text" required name="user_name" value="<?php echo $user['user_name']; ?>" class="form-control">
                                                                     </div>
                                                                     <div class="form-group col-md-12">
